@@ -71,7 +71,7 @@ function prepareLibs() {
 function prepareImage(source, dest) {
   return new Promise((resolve) => {
     unlinkFolder(`${dest}/`)
-      .then(() => prepareLibs())
+      // .then(() => prepareLibs())
       .then(() => fs.promises.readdir(source))
       .then((imgs) => {
         const arrObjImg = imgs.sort((a, b) => a.split('i')[0] - b.split('i')[0])
