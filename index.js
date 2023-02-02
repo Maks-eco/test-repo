@@ -46,7 +46,6 @@ app.get('/videoExist', (req, res) => {
 app.get('/video', (req, res) => {
   const videoFolder = 'temp/generated'
   const { range } = req.headers
-
   if (!range) {
     res.status(400).send('Requires Range header')
     return
