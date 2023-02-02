@@ -1,0 +1,22 @@
+<html>
+<head>
+  <style type="text/css"></style>
+</head>
+<body>
+  <button onclick="imageToCanvas()">Proc elem</button><br>
+  <div>
+    <input type="checkbox" id="sideCheck" name="sideCheck" checked>
+    <label for="sideCheck">Front side processing</label>
+  </div>
+  <div id="videoContainer" hidden>
+    <video width="300" height="300" controls autoplay id="videoWindow">
+      <source type="video/mp4" id="videoSource">
+    Your browser does not support the video tag.
+    </video>
+  </div>
+  <input type="file" id="file" accept=".jpg, .jpeg, .png, .bmp">
+  <img src="test.jpg" id="constImg" hidden>
+  <script src="./h264-mp4-encoder.web.js"></script>
+  <script type="module" src="./main.mjs"></script>
+</body>
+</html>
